@@ -2,16 +2,16 @@
 
 Gem::Specification.new do |s|
   s.name = "ipa_reader"
-  s.version = "0.7.1"
+  s.version = "0.7.2"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Nicholas Schlueter"]
+  s.authors = ["Nicholas Schlueter", "Riley Mills"]
   s.date = "2013-09-11"
   s.description = "I am using this gem to get version to build the over the air iPhone Ad Hoc distribution plist file."
-  s.email = "schlueter@gmail.com"
+  s.email = "rileypmills@gmail.com"
   s.executables = ["ipa_reader"]
   s.files = ["History.txt", "README.md", "Rakefile", "bin/ipa_reader", "lib/ipa_reader.rb", "lib/ipa_reader/ipa_file.rb", "lib/ipa_reader/plist_binary.rb", "lib/ipa_reader/png_file.rb", "spec/ipa_reader_spec.rb", "spec/spec_helper.rb", "test/MultiG.ipa", "test/test_ipa_reader.rb", "version.txt"]
-  s.homepage = "http://github.com/schlu/Ipa-Reader"
+  s.homepage = "http://github.com/Sarkazein/Ipa-Reader"
   s.require_paths = ["lib"]
   s.rubyforge_project = "ipa_reader"
   s.rubygems_version = "1.8.25"
@@ -23,13 +23,13 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rubyzip>, [">= 1.0.0"])
-      s.add_runtime_dependency(%q<CFPropertyList>, ["= 2.1.1"])
+      s.add_runtime_dependency(%q<CFPropertyList>, [">= 2.3.5"])
     else
       s.add_dependency(%q<rubyzip>, [">= 1.0.0"])
-      s.add_dependency(%q<CFPropertyList>, ["= 2.1.1"])
+      s.add_dependency(%q<CFPropertyList>, [">= 2.3.5"])
     end
   else
     s.add_dependency(%q<rubyzip>, [">= 1.0.0"])
-    s.add_dependency(%q<CFPropertyList>, ["= 2.1.1"])
+    s.add_dependency(%q<CFPropertyList>, [">= 2.3.5"])
   end
 end
